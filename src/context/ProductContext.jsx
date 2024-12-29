@@ -33,7 +33,7 @@ export const ProductContextProvider = ({ children }) => {
         },
 
         getProducts: async () => {
-          let res = await fetch("/api/products", {
+          let res = await fetch("https://stellarshop-xos9.onrender.com/api/products", {
             method: "GET",
           });
           let results = await res.json();
