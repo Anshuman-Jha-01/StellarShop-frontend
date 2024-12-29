@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": "https://stellar-shop-backend.vercel.app"
+      "/api": "https://stellarshop-xos9.onrender.com"
     }
   }
 })
