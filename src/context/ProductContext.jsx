@@ -20,7 +20,7 @@ export const ProductContextProvider = ({ children }) => {
               message: "Please fill in all the fields.",
             };
           }
-          const res = await fetch("/api/products", {
+          const res = await fetch("https://stellarshop-xos9.onrender.com/api/products", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export const ProductContextProvider = ({ children }) => {
         },
 
         deleteProduct: async (id) => {
-          let res = await fetch(`/api/products/${id}`, {
+          let res = await fetch(`https://stellarshop-xos9.onrender.com/api/products/${id}`, {
             method: "DELETE",
           });
           let result = await res.json();
@@ -60,7 +60,7 @@ export const ProductContextProvider = ({ children }) => {
         },
 
         updateProduct: async(id, updatedProduct) => {
-            let res = await fetch(`/api/products/${id}`, {
+            let res = await fetch(`https://stellarshop-xos9.onrender.com/api/products/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
